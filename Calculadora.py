@@ -5,6 +5,10 @@ class Calculadora:
         if cadena=="":
             return 0
         elif "," in cadena:
-            return int(cadena[0])+int(cadena[2])
+            suma=0
+            numeros=cadena.split(",")
+            for num in numeros:
+                suma+=int(num)
+            return suma
         else:
             return int(cadena)
